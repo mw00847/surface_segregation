@@ -20,10 +20,8 @@ The polyply suite (7), provides a simple process to produce a wide range of poly
 
 A surface-vacuum interface can be created by extending the Z axis of an equilibriated polymer blend box (8). Due to periodic boundary constraints, two interfaces are created.
 
-# Method 
 
 
-# Results
 
 
 Polymer blends where created using the Polyply suite.  
