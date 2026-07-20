@@ -1,19 +1,11 @@
-## UNDERSTANDING SURFACE SEGREGATION OF POLYMER BLENDS WITH MARTINI 3.
+# UNDERSTANDING SURFACE SEGREGATION OF POLYMER BLENDS WITH MARTINI 3.
 
+##Abstract
 Predicting the surface composition of a polymer blend is often determined by the component with the lowest surface energy (1,2). However the structure (entropic) and functional groups (enthalpic) contributions have shown to contradict the surface energy belief. This works varies blends of differing surface energy, chain length and concentration helping to provide an understanding of the driving force in different types of polymer blends.
 
-* build polymer blends with different lengths and chemistries
+##Introduction
 
-* extend the z axis of the box with a vacuum either side to simulate an interface
-
-* run simulations and plot the density across the z axis of different components to understand any segregation
-
-
-# Surface segregation of polymer blends
-
-Surface energy is the free energy per unit area of creating an interface with air or vacuum. Surface tension is the force per unit length along the surface opposing the interface of air or vacuum (1). The surface of polymer blends is often different from the bulk material (1). This in itself provides the opportunity to add functionality at the surface interface for coatings to have properties such as corrosion inhibition, hydrophobicity, conductance and anti cratering. Flow aids are commonly used in small quantities in coatings to improve the wetting and work of adhesion and also enhance the visual effect of the coating (4). These flow aids are often a low weight polyacrylic in comparison to the blend of polymers that make up the binder and topocoat.     
-
-A prerequisite of segregation is imiscibility in the polymer blend (2), using an extended Flory Huggins parameter it is suggested that ester monomers with a similar backbone structure increase miscibility. 
+Surface energy is the free energy per unit area of creating an interface with air or vacuum. Surface tension is the force per unit length along the surface opposing the interface of air or vacuum (1). The surface of polymer blends is often different from the bulk material (1). This in itself provides the opportunity to add functionality at the surface interface for coatings to have properties such as corrosion inhibition, hydrophobicity, conductance and anti cratering. Flow aids are commonly used in small quantities in coatings to improve the wetting and work of adhesion and also enhance the visual effect of the coating (4). These flow aids are often a low weight polyacrylic in comparison to the blend of polymers that make up the binder and topocoat. A prerequisite of segregation is imiscibility in the polymer blend (2), using an extended Flory Huggins parameter it is suggested that ester monomers with a similar backbone structure increase miscibility. 
 
 This work uses molecular dynamics with GROMACS to vary surface tension, molecular weight and concentration of useful polymer blends to further understand the key reasons for surface segregation. Blends of linear homopolymers that vary only with molecular weight produce melts where the lower weight chains are found at the surface (9).
 
