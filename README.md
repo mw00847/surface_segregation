@@ -7,7 +7,7 @@ Predicting the surface composition of a polymer blend is often determined by the
 
 Surface energy is the free energy per unit area of creating an interface with air or vacuum. Surface tension is the force per unit length along the surface opposing the interface of air or vacuum (1). The surface of polymer blends is often different from the bulk material (1). This in itself provides the opportunity to add functionality at the surface interface for coatings to have properties such as corrosion inhibition, hydrophobicity, conductance and anti cratering. Flow aids are commonly used in small quantities in coatings to improve the wetting and work of adhesion and also enhance the visual effect of the coating (4). These flow aids are often a low weight polyacrylic in comparison to the blend of polymers that make up the binder and topocoat. A prerequisite of segregation is imiscibility in the polymer blend (2), using an extended Flory Huggins parameter it is suggested that ester monomers with a similar backbone structure increase miscibility. 
 
-This work uses molecular dynamics with GROMACS to vary surface tension, molecular weight and concentration of useful polymer blends to further understand the key reasons for surface segregation. Blends of linear homopolymers that vary only with molecular weight produce melts where the lower weight chains are found at the surface (9).
+This work uses molecular dynamics with GROMACS with the MARTINI 3 forcefield to vary surface tension, molecular weight and concentration of useful polymer blends to further understand the key reasons for surface segregation. Blends of linear homopolymers that vary only with molecular weight produce melts where the lower weight chains are found at the surface (9).
 
 The polyply suite (7), provides a simple process to produce a wide range of polymer systems built using the MARTINI forcefield. As with the tutorial on their github page of dextran and PEO (6), simulation of 500ns of the blend produces a phase seperated system as below. This work has been repeated from their paper (3).
 
@@ -15,11 +15,17 @@ The polyply suite (7), provides a simple process to produce a wide range of poly
 
 A surface-vacuum interface can be created by extending the Z axis of an equilibriated polymer blend box (8). Due to periodic boundary constraints, two interfaces are created.
 
+## Method 
 
+This work is split into several different polymer blend systems, with the experimental variable changed in each case. Initial polymer chain coordinates were generated using polyply, producing starting configurations at a density of 1000 kg/m³ in a cubic box with dimensions determined by blend concentration and solvent content. The Martini 3 coarse-grained force field was used throughout, with solvent (chlorobenzene) parameters taken from the Martini 3 small molecule library. Polyply assigns identical residue names to polymer chains regardless of chain length, which prevents GROMACS from distinguishing between species of different length within `make_ndx`. This was resolved with a targeted `sed` edit to column 4 of the atoms section in the generated topology, giving each chain length a distinct residue name. Note that GROMACS truncates long residue names in GRO format (e.g. PEO477 is truncated to PEO47); index group names were chosen to match this truncated output rather than the original polyply naming.
 
+The simulation box was extended to 50 nm in the z-direction using gmx editconf, creating a liquid-vapour slab geometry with vacuum regions at both interfaces. This geometry allows direct measurement of surface segregation through density profiles along the z-axis. No pressure coupling was applied at any stage after box extension; all subsequent runs used the NVT ensemble.
 
+Energy minimisation was performed using the steepest descent algorithm, followed by a short NVT stabilisation run prior to production. NVT production runs of 1 microsecond (10⁸ steps at dt = 0.01 ps) were carried out using GROMACS 2024.3, with GPU acceleration on an NVIDIA RTX 4060. Temperature was maintained at 298 K using a velocity-rescale thermostat with a coupling time constant of τ = 1.0 ps. Electrostatics were treated using a reaction-field scheme with a cutoff of 1.1 nm, relative permittivity εᵣ = 15 and εᵣf = 0, consistent with Martini 3 recommendations. Van der Waals interactions used a cutoff scheme with potential shift and a cutoff of 1.1 nm. A Verlet neighbour list was used with a buffer tolerance of 0.005 and update frequency of every 10 steps. No constraints were applied to bonds.
 
-Polymer blends where created using the Polyply suite.  
+## Results
+
+  
 
 (1) Tailoring the Attraction of Polymers toward Surfaces
 Gila E. Stein, Travis S. Laws, and Rafael Verduzco
