@@ -11,7 +11,7 @@ This work uses molecular dynamics with GROMACS with the MARTINI 3 forcefield to 
 
 The polyply suite (7), provides a simple process to produce a wide range of polymer systems built using the MARTINI forcefield. As with the tutorial on their github page of dextran and PEO (6), simulation of 500ns of the blend produces a phase seperated system as below. This work has been repeated from their paper (3).
 
-![alt text](https://github.com/mw00847/surface-segregation/blob/main/dextran_PEO.png?raw=True)
+![alt text](https://github.com/mw00847/surface_segregation/blob/main/dextran_PEO.png?raw=True)
 
 A surface-vacuum interface can be created by extending the Z axis of an equilibriated polymer blend box (8). Due to periodic boundary constraints, two interfaces are created.
 
