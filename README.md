@@ -25,9 +25,9 @@ Energy minimisation was performed using the steepest descent algorithm, followed
 
 ## Results
 
-![alt text](https://github.com/mw00847/surface-segregation/P44.png.png?raw=True)
+![alt text]([https://github.com/mw00847/surface-segregation/P44.png.png?raw=True)
 
-![alt text](https://github.com/mw00847/surface-segregation/P477.png.png?raw=True)
+![alt text]((https://github.com/mw00847/surface_segregation/blob/main/P477.png).png.png?raw=True)
 
 (1) Tailoring the Attraction of Polymers toward Surfaces
 Gila E. Stein, Travis S. Laws, and Rafael Verduzco
