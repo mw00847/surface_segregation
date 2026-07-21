@@ -25,6 +25,16 @@ Energy minimisation was performed using the steepest descent algorithm, followed
 
 ## Results
 
+The systems studied in this work include blends of 
+
+* polyethene oxide, PEO 477 with PEO44, here where only the chain length and concentration is varied.
+* (poly(3-hexylthiophene)) and polystyrene, P3HT126 with PS20, the surface tension, chain length and concentration is varied.
+* (poly(3-hexylthiophene)) and polystyrene, P3HT20 with PS 20, varying surface tension. 
+
+Polyethylene Oxide
+
+Here in the blend of polyethylene oxide with longer chains of 477 monomers with 44 the experiment focuses on the chain length and entropy to understand the segregation of shorter and longer chains with little or no surface energy difference. The longer chains sit in the bulk of the slab where entropy is higher and there is more room for the chains to move. The smaller PEO44 chains have more freedom to move and are found at the interfaces where entropy is lower but they can fit in more efficently than the longer chains.
+
 ![P44 density profile](https://github.com/mw00847/surface_segregation/blob/main/P44.png?raw=true)
 ![P477 density profile](https://github.com/mw00847/surface_segregation/blob/main/P477.png?raw=true)
 
